@@ -1784,9 +1784,13 @@ export default function TriviaLegal() {
             <p style={{ fontSize: 14, color: cat.color, marginBottom: 4 }}>
               {cat.icono} {cat.nombre}
             </p>
-
-            ;
+            <div style={{ display: "flex", gap: 12, marginTop: 24, justifyContent: "center", flexWrap: "wrap" }}>
+              <button onClick={() => iniciarJuego(categoriaActual)} style={{ padding: "14px 28px", background: "#C9A84C", color: "#000", border: "none", borderRadius: 10, fontWeight: 700, fontSize: 15, cursor: "pointer" }}>Jugar de nuevo</button>
+              <button onClick={() => setPantalla("inicio")} style={{ padding: "14px 28px", background: "transparent", color: "#C9A84C", border: "1px solid #C9A84C", borderRadius: 10, fontWeight: 700, fontSize: 15, cursor: "pointer" }}>Volver al inicio</button>
+            </div>
+          </div>
+        </div>
+      );
   }
-
   return null;
 }
