@@ -1785,75 +1785,7 @@ export default function TriviaLegal() {
               {cat.icono} {cat.nombre}
             </p>
 
-            {descuento > 0 ? (
-              <div
-                style={{
-                  background: "#C9A84C15",
-                  border: "1px solid #C9A84C40",
-                  borderRadius: 12,
-                  padding: "20px 16px",
-                  marginTop: 24,
-                }}
-              >
-                <p style={{ fontSize: 14, color: "#C9A84C", fontWeight: 700, margin: 0 }}>
-                  🎉 ¡Ganaste un {descuento}% de descuento en honorarios!
-                </p>
-                <p style={{ fontSize: 12, color: "#888", marginTop: 8 }}>
-                  Presentá esta pantalla en el Estudio para hacerlo efectivo.
-                </p>
-                <p style={{ fontSize: 11, color: "#555", marginTop: 8 }}>
-                  Código: TRIVIA-{categoriaActual.toUpperCase()}-{puntaje}-{Date.now().toString(36).toUpperCase()}
-                </p>
-              </div>
-            
-
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 28, flexWrap: "wrap" }}>
-              <button
-                style={{ ...estilos.botonSiguiente(cat.color), width: "auto", padding: "12px 24px" }}
-                onClick={() => iniciarPartida(categoriaActual)}
-              >
-                🔄 Jugar de nuevo
-              </button>
-              <button
-                style={{ ...estilos.btnVolver, padding: "12px 24px" }}
-                onClick={volverInicio}
-              >
-                ← Elegir otra categoría
-              </button>
-            </div>
-
-            <div style={estilos.infoPanel}>
-              <h3 style={{ color: "#C9A84C", margin: "0 0 12px", fontSize: 14 }}>
-                ¿Necesitás asesoramiento legal?
-              </h3>
-              <div style={{ ...estilos.infoItem, fontSize: 13 }}>
-                <span>📍</span>
-                <span>{DATOS_ESTUDIO.direccion}</span>
-              </div>
-              <div style={{ ...estilos.infoItem, fontSize: 13 }}>
-                <span>📞</span>
-                <span>{DATOS_ESTUDIO.telefonos.join(" / ")}</span>
-              </div>
-              <div style={{ ...estilos.infoItem, fontSize: 13, borderBottom: "none" }}>
-                <span>💬</span>
-                <a
-                  href={`https://wa.me/${DATOS_ESTUDIO.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#25D366" }}
-                >
-                  Contactanos por WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <p style={{ textAlign: "center", fontSize: 11, color: "#444", marginTop: 20 }}>
-            © {new Date().getFullYear()} {DATOS_ESTUDIO.nombre}
-          </p>
-        </div>
-      </div>
-    );
+            ;
   }
 
   return null;
