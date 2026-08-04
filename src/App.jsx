@@ -1805,11 +1805,7 @@ export default function TriviaLegal() {
                   Código: TRIVIA-{categoriaActual.toUpperCase()}-{puntaje}-{Date.now().toString(36).toUpperCase()}
                 </p>
               </div>
-            ) : (
-              <p style={{ fontSize: 13, color: "#666", marginTop: 20 }}>
-                Necesitás al menos 20% de aciertos para obtener descuento. ¡Intentalo de nuevo!
-              </p>
-            )}
+            
 
             <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 28, flexWrap: "wrap" }}>
               <button
