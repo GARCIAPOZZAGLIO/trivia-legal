@@ -1790,6 +1790,7 @@ export default function TriviaLegal() {
             </div>
           </div>
         </div>
+      </div>
       );
   }
   return null;
