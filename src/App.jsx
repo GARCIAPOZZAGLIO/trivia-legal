@@ -1327,7 +1327,7 @@ export default function TriviaLegal() {
   };
 
   const porcentaje = preguntas.length > 0 ? Math.round((puntaje / preguntas.length) * 100) : 0;
-  const descuento = porcentaje >= 20 ? Math.min(porcentaje, 50) : 0;
+  const descuento = 0;
 
   const categoriaKeys = Object.keys(CATEGORIAS);
 
