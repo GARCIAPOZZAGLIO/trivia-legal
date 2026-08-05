@@ -2615,7 +2615,6 @@ export default function TriviaLegal() {
   };
 
   const porcentaje = preguntas.length > 0 ? Math.round((puntaje / preguntas.length) * 100) : 0;
-  const descuento = porcentaje >= 20 ? Math.min(porcentaje, 50) : 0;
 
   const categoriaKeys = Object.keys(CATEGORIAS);
 
@@ -2853,7 +2852,7 @@ export default function TriviaLegal() {
             <p style={{ fontSize: 13, color: "#666", marginTop: 16, lineHeight: 1.6 }}>
               Poné a prueba tus conocimientos jurídicos.
               <br />
-              20 preguntas por partida — ¡Acertá el 20% y ganá descuento en honorarios!
+              20 preguntas por partida.
             </p>
           </div>
 
@@ -3133,31 +3132,6 @@ export default function TriviaLegal() {
               {cat.icono} {cat.nombre}
             </p>
 
-            {descuento > 0 ? (
-              <div
-                style={{
-                  background: "#C9A84C15",
-                  border: "1px solid #C9A84C40",
-                  borderRadius: 12,
-                  padding: "20px 16px",
-                  marginTop: 24,
-                }}
-              >
-                <p style={{ fontSize: 14, color: "#C9A84C", fontWeight: 700, margin: 0 }}>
-                  🎉 ¡Ganaste un {descuento}% de descuento en honorarios!
-                </p>
-                <p style={{ fontSize: 12, color: "#888", marginTop: 8 }}>
-                  Presentá esta pantalla en el Estudio para hacerlo efectivo.
-                </p>
-                <p style={{ fontSize: 11, color: "#555", marginTop: 8 }}>
-                  Código: TRIVIA-{categoriaActual.toUpperCase()}-{puntaje}-{Date.now().toString(36).toUpperCase()}
-                </p>
-              </div>
-            ) : (
-              <p style={{ fontSize: 13, color: "#666", marginTop: 20 }}>
-                Necesitás al menos 20% de aciertos para obtener descuento. ¡Intentalo de nuevo!
-              </p>
-            )}
 
             <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 28, flexWrap: "wrap" }}>
               <button
